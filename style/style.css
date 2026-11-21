@@ -1,0 +1,286 @@
+
+/* =========================================
+   1. GLOBAL THEME
+========================================= */
+
+.stApp {
+    background-color: #0B1120;
+    color: #F1F5F9;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.block-container {
+    max-width: 1250px;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+/* Hide Streamlit elements */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    background-color: transparent;
+}
+
+/* =========================================
+   2. MAIN TITLE
+========================================= */
+
+h1 {
+    color: #F8FAFC;
+    font-size: 2.7rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+h2, h3 {
+    color: #A78BFA;
+    font-weight: 700;
+}
+
+.stApp p {
+    color: #94A3B8;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   3. FORM CONTAINER
+========================================= */
+
+[data-testid="stForm"] {
+    background-color: #151F32;
+    padding: 32px;
+    border-radius: 18px;
+    border: 1px solid #26344D;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Section titles */
+
+[data-testid="stForm"] h3 {
+    color: #A78BFA;
+    font-size: 1.3rem;
+    padding-bottom: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #334155;
+}
+
+/* =========================================
+   4. INPUT LABELS
+========================================= */
+
+.stSelectbox label,
+.stNumberInput label {
+    color: #CBD5E1 !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================================
+   5. SELECTBOX
+========================================= */
+
+[data-baseweb="select"] > div {
+    background-color: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    min-height: 44px;
+    color: #F8FAFC;
+    transition: all 0.25s ease;
+}
+
+[data-baseweb="select"] > div:hover {
+    border-color: #8B5CF6;
+}
+
+[data-baseweb="select"] > div:focus-within {
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+/* Selectbox text */
+
+[data-baseweb="select"] span {
+    color: #F1F5F9;
+}
+
+/* Dropdown menu */
+
+[data-baseweb="popover"] {
+    background-color: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 10px;
+}
+
+[data-baseweb="menu"] {
+    background-color: #1E293B;
+}
+
+[role="option"] {
+    background-color: #1E293B;
+    color: #F1F5F9;
+}
+
+[role="option"]:hover {
+    background-color: #334155;
+}
+
+/* =========================================
+   6. NUMBER INPUT
+========================================= */
+
+[data-testid="stNumberInput"] input {
+    background-color: #1E293B;
+    color: #F8FAFC;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    min-height: 44px;
+}
+
+[data-testid="stNumberInput"] input:focus {
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+/* Number input buttons */
+
+[data-testid="stNumberInput"] button {
+    background-color: #26344D;
+    color: #CBD5E1;
+    border: none;
+}
+
+/* =========================================
+   7. SUBMIT BUTTON
+========================================= */
+
+.stFormSubmitButton button {
+    width: 100%;
+    min-height: 52px;
+    background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 18px;
+    transition: all 0.3s ease;
+}
+
+.stFormSubmitButton button:hover {
+    background: linear-gradient(135deg, #A78BFA, #7C3AED);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.35);
+    transform: translateY(-2px);
+}
+
+.stFormSubmitButton button:active {
+    transform: scale(0.98);
+}
+
+/* =========================================
+   8. PREDICTION RESULTS
+========================================= */
+
+[data-testid="stAlert"] {
+    border-radius: 14px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Success */
+
+[data-testid="stAlert"][kind="success"] {
+    background-color: #064E3B;
+    color: #D1FAE5;
+    border: 1px solid #10B981;
+}
+
+/* Error */
+
+[data-testid="stAlert"][kind="error"] {
+    background-color: #7F1D1D;
+    color: #FEE2E2;
+    border: 1px solid #EF4444;
+}
+
+/* =========================================
+   9. COLUMNS
+========================================= */
+
+[data-testid="column"] {
+    padding: 5px;
+}
+
+/* =========================================
+   10. SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B1120;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8B5CF6;
+}
+
+/* =========================================
+   11. RESPONSIVE DESIGN
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .block-container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    [data-testid="stForm"] {
+        padding: 15px;
+    }
+
+    .stApp p {
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   12. TRANSITIONS
+========================================= */
+
+.stSelectbox,
+.stNumberInput,
+.stButton {
+    transition: all 0.3s ease;
+}

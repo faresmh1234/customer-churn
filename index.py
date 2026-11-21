@@ -2,6 +2,27 @@ import streamlit as st
 import pandas as pd
 import joblib
 model = joblib.load("model/logistic_regression.pkl")
+
+
+
+
+
+
+st.set_page_config(
+    page_title="Customer Churn Prediction",
+    page_icon="📊",
+    layout="wide"
+)
+
+
+def load_css(file_path):
+    with open(file_path, "r", encoding="utf-8") as f:
+        css = f.read()
+
+    st.markdown(
+        f"<style>{css}</style>",
+        unsafe_allow_html=True
+    )
 columns = [
     'SeniorCitizen', 'Partner', 'Dependents', 'tenure', 'PaperlessBilling',
     'MonthlyCharges', 'TotalCharges',
@@ -57,6 +78,9 @@ def preprocess(df_raw: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(scaled.transform(df), columns=columns, index=df.index)
 
 st.set_page_config(page_title="customer_churn", page_icon="https://img.icons8.com/?size=100&id=f354PeNeLLyN&format=png&color=000000")
+
+
+load_css("style/style.css")
 st.title("Customer Churn Prediction")
 st.write("This is a simple web application that predicts customer churn based on user input features. Please provide the necessary information below to get started.")
 
